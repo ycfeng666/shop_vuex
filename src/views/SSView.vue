@@ -1,12 +1,14 @@
 <template>
+	<!-- 商场与购物车的的组件,内容相似可以 直接复用 -->
 	<div class="shop">
 		<div class="left">
-			<h1>商城</h1>
+			<h3>商城</h3>
 			<ShopView :ShopData="Store.state.originShopData" IsShop="1"></ShopView>
 		</div>
 		<div class="right">
-			<h1>购物车</h1>
+			<h3>购物车</h3>
 			<ShopView :ShopData="Store.state.sartData" IsShop="0"></ShopView>
+			<div class="footer"><b>总价：</b>{{Store.state.allPrice+'元'}}</div>
 		</div>
 	</div>
 </template>
@@ -34,7 +36,7 @@
 	.shop {
 		display: flex;
 		width: 75%;
-		margin: 30px auto;
+		margin: 30px auto;		
 	}
 	.left,
 	.right {
@@ -44,5 +46,11 @@
 	}
 	.right {
 		margin-left: 20px;
+		position: relative;
+	}
+	.footer{
+		position: absolute;
+		bottom: 5px;
+		text-align: right;
 	}
 </style>

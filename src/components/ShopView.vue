@@ -1,9 +1,9 @@
 <template>
 	<div class="box">
-		<div class="search">
+		<!-- <div class="search">
 			<input type="text" v-model="searchData" />
-			<button @click="ToSearch(searchData)"></button>
-		</div>
+			<button @click="ToSearch(searchData)">搜索</button>
+		</div> -->
 		<div class="item" v-for="(item, index) in ShopData" :key="index">
 			<div class="img">
 				<img :src="item.src" :title="'列表' + (index + 1)" />

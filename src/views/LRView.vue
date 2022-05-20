@@ -49,10 +49,9 @@
 						else if (Type === 2) data.TLName = 'ResigestView';
 					},
 					ToLogin: (v1, v2) => {
-						console.log(v1, v2);
 						if (v1 === 'admin' && v2 === '123456') {
 							alert('登陆成功');
-							uRouter.push('/shop');
+							uRouter.push('/ss');
 						} else alert('登陆失败');
 					},
 					ToRegeist: () => {

@@ -1,4 +1,5 @@
 <template>
+	<!-- 登录与注册的组件,内容相似可以 直接复用 -->
 	<div>
 		<div class="form-input">
 			<input type="text" :placeholder="PleaseInputUser" v-model="user" />
@@ -23,6 +24,7 @@
 				user: '',
 				pass: '',
 				ToLogin: () => {
+					// 调用父类的方法,将组件内的值一并传递到父类
 					context.emit('realizeFun', Data.user, Data.pass);
 				},
 			});
